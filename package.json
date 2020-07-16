@@ -1,0 +1,45 @@
+{
+  "name": "ifkz-frontend-new",
+  "version": "1.0.0",
+  "description": "IFKZ new frontend ",
+  "license": "MIT",
+  "typings": "lib/ts/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "ci": "run-p ci:*",
+    "ci:lint": "eslint --cache --max-warnings 0 src",
+    "ci:test": "jest --passWithNoTests",
+    "clean": "rm -rf lib",
+    "compile": "yarn clean && tsc --outDir lib/ts -p src",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@types/classnames": "^2.2.10",
+    "@types/react": "^16.9.36",
+    "classnames": "^2.2.6",
+    "emotion-rgba": "^0.0.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.5",
+    "bootstrap-4-grid": "^3.4.0",
+    "utility-types": "^3.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "ts-loader": "^8.0.1"
+  }
+}
