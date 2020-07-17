@@ -8,9 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "ci": "run-p ci:*",
-    "ci:lint": "eslint --cache --max-warnings 0 src",
-    "ci:test": "jest --passWithNoTests",
+    "ci": "eslint --cache --max-warnings 0 src",
     "clean": "rm -rf lib",
     "compile": "yarn clean && tsc --outDir lib/ts -p src",
     "start": "start-storybook -p 6006",
@@ -82,6 +80,8 @@
     "prettier": "^2.0.5",
     "lint-staged": "^10.2.9",
     "react-docgen-typescript-loader": "^3.7.2",
-    "ts-loader": "^8.0.1"
+    "ts-loader": "^8.0.1",
+    "babel-eslint": "^10.1.0",
+    "jest": "^26.0.1"
   }
 }

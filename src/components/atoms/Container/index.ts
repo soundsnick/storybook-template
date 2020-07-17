@@ -1,4 +1,4 @@
-export * from './component';
-
 import { Props } from './props';
+
+export * from './component';
 export type ContainerProps = Props;

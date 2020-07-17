@@ -1,0 +1,14 @@
+image: node
+
+stages:
+  - lint
+
+eslint:
+  stage: lint
+  script:
+    - yarn
+    - apk --no-cache add git
+    # Lint the last commit.
+    - git log -1 --pretty=%B | npx commitlint
+    - yarn compile
+    - yarn ci

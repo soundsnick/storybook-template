@@ -1,12 +1,19 @@
-import {Props} from "./props";
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
+
+import { colors } from '../../../core';
+import { Props } from './props';
 
 export const MockBackground = styled.div<Props>`
   padding: 20px;
   border-radius: 10px;
-  background-color: ${ ({ background }: Props) => background };
+  border: 2px solid #282828;
+  ${({ background, color }: Props) => `
+    background-color: ${background};
+    color: ${color};
+  `}
 `;
 
 MockBackground.defaultProps = {
-  background: "#060815"
+  background: colors.globalBg,
+  color: colors.textColor,
 };
